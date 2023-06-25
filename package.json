@@ -1,10 +1,10 @@
 {
-	"name": "@boilertown/react-ui-boilerplate",
+	"name": "what-toast",
 	"version": "0.0.0",
-	"description": "React UI library boilerplate",
+	"description": "A developer friendly animated toast library for react.",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/boilertown/react-ui-boilerplate.git"
+		"url": "https://github.com/tarikyildizci/what-toast.git"
 	},
 	"sideEffects": false,
 	"exports": {
@@ -46,7 +46,8 @@
 		"not op_mini all"
 	],
 	"dependencies": {
-		"@babel/runtime": "^7.20.7"
+		"@babel/runtime": "^7.20.7",
+		"styled-components": "^6.0.0-rc.6"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.20.12",
@@ -56,9 +57,6 @@
 		"@changesets/cli": "^2.26.0",
 		"@commitlint/cli": "^17.4.1",
 		"@commitlint/config-conventional": "^17.4.0",
-		"@emotion/babel-plugin": "^11.10.5",
-		"@emotion/react": "^11.10.5",
-		"@emotion/styled": "^11.10.5",
 		"@mdx-js/react": "^1.6.22",
 		"@rollup/plugin-babel": "^6.0.3",
 		"@rollup/plugin-commonjs": "^24.0.0",
@@ -87,6 +85,7 @@
 		"@typescript-eslint/parser": "^5.48.1",
 		"@zerollup/ts-transform-paths": "^1.7.18",
 		"babel-loader": "^9.1.2",
+		"babel-plugin-styled-components": "^2.1.4",
 		"eslint": "8.31.0",
 		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-jsx-a11y": "^6.7.1",
@@ -115,8 +114,6 @@
 		"webpack-cli": "^5.0.1"
 	},
 	"peerDependencies": {
-		"@emotion/react": "^11.0.0",
-		"@emotion/styled": "^11.0.0",
 		"react": "^16.8.0 || ^17 || ^18",
 		"react-dom": "^16.8.0 || ^17 || ^18"
 	},

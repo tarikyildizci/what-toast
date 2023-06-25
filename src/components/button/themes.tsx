@@ -1,5 +1,4 @@
-import { css } from '@emotion/react';
-import { rgba } from '@src/utils/rgba';
+import { css } from 'styled-components'
 import {
 	ERROR,
 	PRIMARY,
@@ -7,27 +6,27 @@ import {
 	SUCCESS,
 	WARN,
 	WHITE,
-} from '@src/constants/colors';
-import type { Color, Variant } from './Button';
+} from '@src/constants/colors'
+import type { Color, Variant } from './Button'
 
 function getColorScheme(color: Color) {
 	switch (color) {
 		case 'error':
-			return ERROR;
+			return ERROR
 		case 'success':
-			return SUCCESS;
+			return SUCCESS
 		case 'warn':
-			return WARN;
+			return WARN
 		case 'secondary':
-			return SECONDARY;
+			return SECONDARY
 		case 'primary':
 		default:
-			return PRIMARY;
+			return PRIMARY
 	}
 }
 
 export function getTheme(color: Color, variant: Variant) {
-	const colorScheme = getColorScheme(color);
+	const colorScheme = getColorScheme(color)
 	switch (variant) {
 		case 'outline':
 			return css`
@@ -35,24 +34,24 @@ export function getTheme(color: Color, variant: Variant) {
 				background-color: transparent;
 				border: 1px solid ${colorScheme};
 				&:hover {
-					background-color: ${rgba(colorScheme, 0.05)};
+					background-color: ${colorScheme};
 				}
-			`;
+			`
 		case 'text':
 			return css`
 				color: ${colorScheme};
 				background-color: transparent;
 				border: 1px solid transparent;
 				&:hover {
-					background-color: ${rgba(colorScheme, 0.05)};
+					background-color: ${colorScheme};
 				}
-			`;
+			`
 		case 'solid':
 		default:
 			return css`
 				color: ${WHITE};
 				background-color: ${colorScheme};
 				border: 1px solid ${colorScheme};
-			`;
+			`
 	}
 }
